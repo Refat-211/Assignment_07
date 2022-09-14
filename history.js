@@ -14,7 +14,7 @@ function addHistory(questionText, timeTaken, errorCount) {
 
   histories.appendChild(newRow);
 
-  let previousTests = JSON.parse(localStorage.getItem("clearHistory")) || [];
+  let previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
   previousTests.push({ questionText, timeTaken, errorCount });
   localStorage.setItem("testHistory", JSON.stringify(previousTests));
 
@@ -23,7 +23,7 @@ function addHistory(questionText, timeTaken, errorCount) {
 
 function displayHistory() {
   histories.innerHTML = "";
-  const previousTests = JSON.parse(localStorage.getItem("clearHistory")) || [];
+  const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
 
   previousTests.forEach((test) => {
     const newRow = document.createElement("div");
