@@ -28,6 +28,7 @@ const typeController = (e) => {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
+  window.onkeydown = function (e) { return !(e.keyCode == 32); };
 
   // these are the valid character we are allowing to type
   const validLetters =
