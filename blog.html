@@ -46,13 +46,10 @@ body {
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-dark bg-gradient text-white fs-5">
-                            <strong>Ans:</strong> SessionStorage is similar to localStorage. The read-only sessionStorage property
-                            accesses a session Storage object for
-                            the current origin. sessionStorage is similar to localStorage; the difference is that while data in
-                            localStorage doesn't
-                            expire, data in sessionStorage is cleared when the page session ends. Whenever a document is loaded in a
-                            particular tab
-                            in the browser, a unique page session gets created and assigned to that particular tab.
+                            <strong>Ans:</strong> SessionStorage is similar to localStorage. The read-only sessionStorage property accesses a session Storage object for
+                            the current origin. The difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared
+                            when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets
+                            created and assigned to that particular tab.
                         </div>
                     </div>
                 </div>
@@ -89,10 +86,11 @@ body {
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-dark bg-gradient text-white fs-5">
-                            <strong>Ans:</strong> The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue.
-                            If the Call Stack is empty, the
-                            Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively
-                            runs it. Such
+                            <strong>Ans:</strong> JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and
+                            processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C
+                            and Java.
+                            The Event Loop has one simple job to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the
+                            Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such
                             an iteration is called a tick in the Event Loop.
                         </div>
                     </div>
@@ -109,7 +107,7 @@ body {
                         <div class="accordion-body bg-dark bg-gradient text-white fs-5">
                             <strong>Ans:</strong> The global undefined property represents the primitive value undefined. It is one of
                             JavaScript's primitive types.
-                            > 8 ways to get undefined
+                            8 ways to get undefined
                             1. Variable that is not initialized will give undefined.
                             2. Function with no return.
                             3. Parameter that is not passed will be undefined.
