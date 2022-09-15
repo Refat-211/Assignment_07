@@ -28,7 +28,6 @@ const typeController = (e) => {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
-  window.onkeydown = function (e) { return !(e.keyCode == 32); };
 
   // these are the valid character we are allowing to type
   const validLetters =
@@ -39,6 +38,11 @@ const typeController = (e) => {
     return;
   }
 
+  // auto scroll down problem solved
+  window.onkeydown = function (e) {
+    return !(e.keyCode == 32);
+  };
+
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
@@ -47,7 +51,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
-    return errorCount++;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text

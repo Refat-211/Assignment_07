@@ -5,16 +5,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./bg.png");
+  background-size: cover;
+  background-position: left top;
+  font-family: "Zilla Slab", serif;
+}
+
+.box-container {
+  width: 70%;
+  margin: 0 auto;
+}
+</style>
 </head>
 
 <body>
-    
+    <header>
+        <h1 class="text-center text-white mt-3">Questions and Answer</h1>
+    </header>
+    <main>
+        <section class="container w-75 mb-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            1. What is the difference between localStorage and sessionStorage?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ans:</strong> SessionStorage is similar to localStorage. The read-only sessionStorage property
+                            accesses a session Storage object for
+                            the current origin. sessionStorage is similar to localStorage; the difference is that while data in
+                            localStorage doesn't
+                            expire, data in sessionStorage is cleared when the page session ends. Whenever a document is loaded in a
+                            particular tab
+                            in the browser, a unique page session gets created and assigned to that particular tab.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-
-
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
